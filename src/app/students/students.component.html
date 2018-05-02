@@ -1,0 +1,33 @@
+<h1>{{name}}</h1>
+
+<div *ngIf="students != NULL; then studentsList else onstudents"></div>
+<ng-template #studentsList>
+    <table class="table"  >
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Major</th>
+                <th>avrage</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let student of students'>
+                    
+                <td>{{student.name}}</td>
+                <td>{{student.major}}</td>
+                <td>{{student.avg }}</td>
+                <td>
+                    <app-start [Num]=(student.avg)></app-start>
+                </td>
+                
+            
+        
+            </tr>
+        </tbody>
+    </table>
+          
+</ng-template>
+  <ng-template  #onstudents>
+    No Courses
+  </ng-template>

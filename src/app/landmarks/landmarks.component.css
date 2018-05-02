@@ -1,0 +1,15 @@
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px ;
+    padding: 10px;
+}
+
+.left{
+    width: 70%;
+    float: left;
+}
+.right{
+    width: 30%;
+    float: right;
+}
